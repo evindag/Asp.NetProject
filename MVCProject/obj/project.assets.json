@@ -11808,11 +11808,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Selin\\MVCProject\\MVCProject.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\evin\\Asp.NetProject\\MVCProject\\MVCProject.csproj",
       "projectName": "MVCProject",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Selin\\MVCProject\\MVCProject.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\evin\\Asp.NetProject\\MVCProject\\MVCProject.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Selin\\MVCProject\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\evin\\Asp.NetProject\\MVCProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
