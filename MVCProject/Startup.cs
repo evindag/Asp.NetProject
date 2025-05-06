@@ -1,4 +1,4 @@
-﻿using System;
+﻿pusing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -56,7 +56,7 @@ namespace MVCProject
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                     template: "{controller=Kitap}/{action=Giris}/{id?}");
             });
         }
     }
