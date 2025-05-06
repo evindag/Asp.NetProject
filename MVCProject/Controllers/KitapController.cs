@@ -1,23 +1,36 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using MVCProject.Models;
 public class KitapController: Controller
 {
- public IActionResult Kategoriler()
- {
-    var kitap = new KitapModel{
-      KitapId = 1,
-      KitapAdi="WTUG",
-      SayfaSayisi = 321
-    };
-    ViewBag.Kitap=kitap; 
-    //ViewBag.Kitap ile "kitap" modeli view'e aktarılıyor
-    ViewBag.Sahip ="Milli Eğitim Bakanlığı";
-    // ViewBag.Sahip ile bir string veri view'e aktarılıyor
-    return View(); //View sayfası çağırılıyor
+ //Geçici Kitap Listesi
+
+ private static List<KitapModel> kitaplar = new List<KitapModel>();
+
+ public IActionResult Giris(){
+   return View();
  }
 
- public IActionResult KitapListesi(int id)
+ [HttpPost]
+ public IActionResult Giris(KullaniciModel model)
  {
-    return View();
+   if(model.KullaniciAdi=="admin" && model.Sifre=="1234"){
+      return RedirectToAction("Ekle");
+   }
+   ViewBag.Hata="Hatalı Giriş!";
+   return View();
  }
- 
+ public IActionResult Ekle()
+ {
+   return View();
+ }
+ [HttpPost]
+ public IActionResult Ekle(KitapModel kitap)
+ {
+   kitaplar.Add(kitap);
+   return RedirectToAction("Liste");
+ }
+public IActionResult Liste(){
+   return View(kitaplar);
+}
 }
